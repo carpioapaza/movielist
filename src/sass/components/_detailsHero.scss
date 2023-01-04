@@ -1,0 +1,183 @@
+.details-hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include disflex(row, center, center, 0);
+  padding: 7% 0 10% 0;
+  min-height: 70vh;
+
+  &__content {
+    z-index: 9;
+    color: white;
+  }
+
+  &__right {
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    font-size: 1rem;
+  }
+  &__logo-container {
+    @include disflex(row, center, center, 0);
+    width: 100%;
+    max-width: 280px;
+
+    &.details-hero__logo-container--max {
+      max-width: 360px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__logo {
+  }
+  &__details-info {
+    @include disflex(column, flex-start, flex-start, 1rem);
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    &--font {
+      font-size: 3.1rem !important;
+    }
+  }
+  &__overview {
+    letter-spacing: 0.5px;
+    line-height: 1.3rem;
+  }
+
+  &__genres {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    color: #a3a3a3;
+  }
+  &__genre {
+    backdrop-filter: blur(2px);
+    padding: 0.15rem;
+    border-radius: 0.2rem;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+  &__cast {
+    &-title {
+      color: #a3a3a3;
+    }
+    &-actors {
+    }
+  }
+
+  &__link {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    align-self: flex-start;
+    @include disflex(row, center, center, 0);
+    background-color: #38bdf8;
+    transition: transform 0.3s ease, background-color 0.1s, box-shadow 0.7s ease;
+
+    &:hover {
+      background-color: white;
+      color: rgb(15 23 42);
+      transform: translate(0.15rem, -0.18rem);
+    }
+  }
+  @include responsive-max(lg) {
+    background-position: right;
+    &__logo-container {
+      max-width: 310px;
+    }
+    &__title {
+      font-size: 1.8rem;
+    }
+    &__overview {
+      font-size: 1rem;
+    }
+  }
+
+  @include responsive-max(md) {
+    &__logo-container {
+      max-width: 260px;
+    }
+    &::before {
+      backdrop-filter: none;
+    }
+    &__content {
+    }
+    &__left {
+      display: none;
+    }
+    &__right {
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__info {
+    }
+    &__title {
+      font-size: 2.5rem;
+    }
+    &__overview {
+      font-size: 0.9rem;
+      letter-spacing: normal;
+    }
+    &__link {
+    }
+  }
+  @include responsive-max(sm) {
+    background-position: center;
+    padding: 0;
+    min-height: auto;
+    &__left {
+      padding: 1rem 0;
+      display: flex;
+    }
+    &__poster {
+      max-width: 150px;
+      width: 100%;
+    }
+
+    &__right {
+      padding: 1rem 0;
+      font-size: 0.8rem;
+    }
+    &__logo-container {
+      max-width: 200px;
+      background-color: rgba(15, 23, 42, 0.068);
+    }
+    &__details-info {
+      gap: 0.5rem;
+    }
+    &__title {
+      font-size: 1.4rem;
+      &--font {
+        font-size: 2.5rem !important;
+      }
+    }
+    &__genres {
+      flex-wrap: wrap;
+    }
+    &__overview {
+      font-size: 0.8rem;
+    }
+    &__cast {
+      font-size: 0.8rem;
+
+      &-title {
+      }
+      &-actors {
+      }
+    }
+  }
+  @include responsive-max(s) {
+  }
+}

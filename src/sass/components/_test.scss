@@ -1,0 +1,4 @@
+.Hola {
+  background-color: purple;
+  @include disflex(row, center, center, 1rem);
+}

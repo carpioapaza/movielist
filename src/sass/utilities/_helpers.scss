@@ -1,0 +1,10 @@
+.ml-padding {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 2rem;
+  @include responsive-max(sm) {
+    padding: 0 1rem;
+    // background-color: red;
+  }
+}

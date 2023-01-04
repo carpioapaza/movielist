@@ -1,0 +1,12 @@
+.popular-page {
+  padding-top: var(--heightHeader);
+  min-height: 100vh;
+}
+.popular {
+  padding: 2rem;
+
+  &__title {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+  }
+}

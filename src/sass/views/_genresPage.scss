@@ -1,0 +1,37 @@
+.genre {
+  padding-top: var(--heightHeader);
+  &__content {
+    padding: 2rem;
+    // width: 100%;
+    // max-width: 1440px;
+    // margin: auto;
+  }
+  &__title {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.8rem;
+    padding-bottom: 1rem;
+  }
+  &__item {
+    overflow: hidden;
+    border-radius: 0.3rem;
+    outline: 1px solid #38bdf8;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: #38bdf8;
+      color: white;
+    }
+    &--active {
+      background-color: #38bdf8;
+      color: white;
+      transform: scale(1.05);
+    }
+  }
+  &__link {
+    padding: 0.3rem;
+  }
+}

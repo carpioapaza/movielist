@@ -1,0 +1,102 @@
+.header {
+  transition: background-color 0.5s cubic-bezier(0.01, 0.82, 0.87, 1.19),
+    color 0.01s ease, transform 0.5s ease;
+  position: fixed;
+  width: 100%;
+  height: var(--heightHeader);
+  background-color: rgb(15 23 42);
+  color: white;
+  z-index: 10;
+  font-size: 1.12rem;
+
+  &__content {
+    height: var(--heightHeader);
+    @include disflex(row, space-between, center, 0);
+  }
+  &.header--home {
+    outline: none;
+    background-color: transparent;
+    color: white;
+  }
+  &__down--home {
+    background-color: red !important;
+  }
+  &__down {
+    background-color: rgba(15, 23, 42, 0.884);
+  }
+
+  &__logo {
+    align-self: stretch;
+    font-size: 1.5rem;
+    @include disflex(row, center, center, 0);
+    span {
+      font-weight: bold;
+      color: #38bdf8;
+      font-style: italic;
+    }
+    &.header__logo--active {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  &__info {
+    @include disflex(row, center, center, 1rem);
+  }
+  &__info--menu {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+  }
+
+  &__info-list {
+    @include disflex(row, center, center, 1rem);
+  }
+
+  &__info-link {
+    @include disflex(row, center, center, 0.2rem);
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+
+    transition: color 0.3s ease;
+    &:hover {
+      color: #38bdf8;
+    }
+    &.header__info-link--active {
+      color: #38bdf8;
+    }
+  }
+  // @include responsive-max(sm) {
+  @media screen and (max-width: 750px) {
+    &__info--menu {
+      display: initial;
+      z-index: 2;
+      @include disflex(row, center, center, 0);
+    }
+    &__info-list {
+      position: fixed;
+      flex-direction: column;
+      background-color: rgba(15, 23, 42, 0.918);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      min-height: 100vh;
+      inset: 0;
+      transform: translateX(-100%);
+      transition: 0.3s ease-in-out;
+      // &:hover > :not(:hover) {
+      //   transform: scale(1.01);
+      // }
+      &.header__info-list--active {
+        transform: translate(0);
+      }
+    }
+    &__info-link {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  // }
+}

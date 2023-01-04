@@ -1,0 +1,13 @@
+.upcoming {
+  padding-top: var(--heightHeader);
+  &__content {
+    padding: 2rem;
+    // width: 100%;
+    // max-width: 1440px;
+    // margin: auto;
+  }
+  &__title {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+  }
+}

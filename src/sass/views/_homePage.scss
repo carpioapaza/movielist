@@ -1,0 +1,75 @@
+.home {
+  &__hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 9;
+    &-content {
+      z-index: 99;
+      padding-top: 7rem;
+      padding-bottom: 8rem;
+      color: white;
+      // @include disflex(row, center, center, 0);
+    }
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-left {
+      flex: 1;
+      @include disflex(column, flex-start, flex-start, 2rem);
+    }
+    &-title {
+      font-size: 3.5rem;
+    }
+    &-overview {
+      max-width: 1000px;
+      font-size: 1.05rem;
+      line-height: 1.5rem;
+    }
+    &-cta {
+      font-size: 1.2rem;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      align-self: flex-start;
+      @include disflex(row, center, center, 0);
+      background-color: #38bdf8;
+      transition: transform 0.3s ease, background-color 0.1s,
+        box-shadow 0.7s ease;
+
+      &:hover {
+        background-color: white;
+        color: rgb(15 23 42);
+        transform: translate(0.15rem, -0.18rem);
+      }
+    }
+    &-right {
+    }
+    &-poster {
+      max-width: 250px;
+    }
+    &-bottom {
+      flex: 1;
+    }
+    @include responsive-max(lg) {
+      &-left {
+        gap: 1rem;
+      }
+      &-title {
+        font-size: 2rem;
+      }
+      &-overview {
+        font-size: 0.9rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      &-right {
+        display: none;
+      }
+    }
+  }
+}

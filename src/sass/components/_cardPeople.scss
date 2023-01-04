@@ -1,0 +1,43 @@
+.cards-people {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  align-items: center;
+  gap: 1rem;
+  overflow-y: hidden;
+  padding: 1rem 0;
+}
+
+.card-people {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  align-self: stretch;
+  box-shadow: rgb(0 0 0 / 18%) 0px 2px 4px;
+  &__header {
+    width: 100%;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__bottom {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  &__cta {
+    font-weight: 400;
+    &:hover {
+      color: rgb(15, 23, 42);
+    }
+  }
+  &__character {
+    font-size: 0.85rem;
+    color: #a3a3a3;
+  }
+}
