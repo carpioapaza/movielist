@@ -1,13 +1,12 @@
-.upcoming {
+.upcoming-page {
   padding-top: var(--heightHeader);
-  &__content {
-    padding: 2rem;
-    // width: 100%;
-    // max-width: 1440px;
-    // margin: auto;
-  }
+  min-height: 100vh;
+}
+.upcoming {
+  padding: 2rem;
   &__title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     padding-bottom: 1rem;
   }
 }

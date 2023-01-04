@@ -53,7 +53,7 @@ const MovieDetailsPage = () => {
   // const cast = { ...movieDetails.data.credits.cast } || [];
 
   return (
-    <div className='details-page'>
+    <div className={`details-page ${isLoading ? 'details-page--loading' : ''}`}>
       {isLoading ? (
         <Loader color='#0F172A' w='5rem' />
       ) : (

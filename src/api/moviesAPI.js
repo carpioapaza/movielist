@@ -10,17 +10,22 @@ export const getPopularMovies = async (page) => {
   );
   return res.data.results;
 };
-export const getUpcomingMovies = async (language = 'es') => {
+export const getTopRatedMovies = async (page) => {
   const res = await moviesApi.get(
-    `/movie/upcoming?${API_KEY}&language=${language}`
+    `/movie/top_rated?${API_KEY}&language=es&page=${page}`
   );
   return res.data.results;
 };
 
-export const getLatesMovie = async (language = 'es') => {
+export const getUpcomingMovies = async (page) => {
   const res = await moviesApi.get(
-    `/movie/top_rated?${API_KEY}&language=${language}`
+    `/movie/upcoming?${API_KEY}&language=es&page=${page}`
   );
+  return res.data.results;
+};
+
+export const getNowPlaying = async () => {
+  const res = await moviesApi.get(`/movie/now_playing?${API_KEY}&language=es`);
   return res.data.results;
 };
 

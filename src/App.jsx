@@ -8,6 +8,7 @@ import PopularPage from './pages/PopularPage';
 import FavoritesPage from './pages/FavoritesPage';
 import UpcomingPage from './pages/UpcomingPage';
 import MovieMediaPage from './pages/MovieMediaPage';
+import NotFoundPage from './pages/NotFoundPage';
 const App = () => {
   return (
     <HashRouter>
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/movie/:id' element={<MovieDetailsPage />} />
         <Route path='/movie/:id/media' element={<MovieMediaPage />} />
         <Route path='/movies/:id' element={<GenresPage />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </HashRouter>
   );

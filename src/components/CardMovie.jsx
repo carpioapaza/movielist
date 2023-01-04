@@ -1,20 +1,17 @@
-import { useState } from 'react';
 import { BsHeartFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import useFavorites from '../hooks/useFavorites';
 
-const CardMovie = ({ movies, horizontal }) => {
-  const [favorites, setFavorites] = useState(
-    JSON.parse(localStorage.getItem('favorites')) || []
-  );
+const CardMovie = ({ movies, horizontal, onRemoveFromFavorites }) => {
+  const { favorites, addToFavorites, removeFromFavorites } = useFavorites();
 
   const handleButtonClick = (movie) => {
     if (favorites.find((item) => item.id === movie.id)) {
-      setFavorites(favorites.filter((item) => item.id !== movie.id));
+      removeFromFavorites(movie);
+      onRemoveFromFavorites(movie);
     } else {
-      setFavorites([...favorites, movie]);
+      addToFavorites(movie);
     }
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    console.log(favorites);
   };
 
   const averageColor = (vote) => {
@@ -39,7 +36,7 @@ const CardMovie = ({ movies, horizontal }) => {
                   ? `https://image.tmdb.org/t/p/original/${movie.poster_path}`
                   : `https://image.tmdb.org/t/p/w1280${movie.backdrop_path}`
               }`}
-              // loading={!horizontal && 'lazy'}
+              loading={horizontal ? '' : 'lazy'}
               alt={movie.title}
             />
 

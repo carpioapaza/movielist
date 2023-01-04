@@ -42,8 +42,6 @@ const MovieMediaPage = () => {
     },
   } = data;
 
-  console.log(backdrops);
-
   return (
     <div className='movie-media'>
       <div className='movie-media__content ml-padding'>

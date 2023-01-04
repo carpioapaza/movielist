@@ -24,7 +24,6 @@ const GenresPage = () => {
     } else return '';
   };
 
-  console.log('movies', movies);
   return (
     <div className='genre'>
       <div className='genre__content ml-padding'>

@@ -127,4 +127,29 @@
       @include disflex(row, center, center, 0);
     }
   }
+  @include responsive-max(sm) {
+    &__modal {
+      max-width: 22rem;
+      width: 100%;
+      gap: 0.8rem;
+    }
+    &__input {
+      height: 1.8rem;
+      border-radius: 0.75rem;
+      padding: 0 0.8rem;
+    }
+  }
+  @include responsive-max(s) {
+    &__modal {
+      max-width: 18rem;
+    }
+    &__result {
+      &-title {
+        font-size: 0.85rem;
+      }
+      &-release-date {
+        font-size: 0.75rem;
+      }
+    }
+  }
 }

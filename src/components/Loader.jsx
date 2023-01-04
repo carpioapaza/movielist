@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Loader({ color, w = '2rem' }) {
+function Loader({ color, w = '2rem', justify = 'start' }) {
   return (
-    <div className='ml-padding'>
+    <div className='loader' style={{ justifyContent: justify }}>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={w}

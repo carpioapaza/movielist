@@ -33,6 +33,45 @@ const CardMovieSkeleton = () => {
       <div className='card-movie-skeleton'>
         <div className='card-movie-skeleton__header'></div>
       </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
+      <div className='card-movie-skeleton'>
+        <div className='card-movie-skeleton__header'></div>
+      </div>
     </div>
   );
 };

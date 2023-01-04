@@ -15,7 +15,7 @@ const PopularPage = () => {
   useEffect(() => {
     (async () => {
       const data = await getPopularMovies(page);
-      setMovies(data.filter((movie) => !loadedIds.includes(movie.id))); // filtra las películas que ya se han cargado
+      setMovies(data.filter((movie) => !loadedIds.includes(movie.id)));
       setLoadedIds((prevLoadedIds) => [
         ...prevLoadedIds,
         ...data.map((movie) => movie.id),
@@ -28,8 +28,8 @@ const PopularPage = () => {
     const getMoreData = async () => {
       const data = await getPopularMovies(page + 1);
       if (data.length > 0) {
-        const newMovies = data.filter((movie) => !loadedIds.includes(movie.id)); // filtra las películas que ya se han cargado
-        setMovies((prevMovies) => prevMovies.concat(newMovies)); // acumula las nuevas películas a la lista existente
+        const newMovies = data.filter((movie) => !loadedIds.includes(movie.id));
+        setMovies((prevMovies) => prevMovies.concat(newMovies));
         setLoadedIds((prevLoadedIds) => [
           ...prevLoadedIds,
           ...newMovies.map((movie) => movie.id),
@@ -42,11 +42,11 @@ const PopularPage = () => {
     getMoreData();
   });
 
-  console.log(movies);
   return (
     <div className='popular-page'>
       <div className='popular ml-padding'>
         <h1 className='popular__title '>Películas populares</h1>
+
         {isLoading ? (
           <CardMovieSkeleton />
         ) : (
@@ -58,13 +58,10 @@ const PopularPage = () => {
           <div
             ref={setLastItemRef}
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
               padding: '1rem 0',
             }}
           >
-            <Loader color='rgb(15, 23, 42)' />
+            <Loader color='rgb(15, 23, 42)' justify='center' />
           </div>
         ) : (
           <p>No hay más películas para cargar</p>
